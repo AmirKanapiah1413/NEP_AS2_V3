@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit Product</title>
+</head>
+<body>
+ <form th:action="@{'/edit/' + ${product.id}}" method="post">
+ <h2>Edit Product</h2>
+ <label>Name:</label>
+ <input type="text" name="name" th:value="${ product.name }"/><br><br>
+ <label>Price:</label>
+ <input type="text" name="price" th:value="${ product.price }"/><br><br>
+ <label>File:</label>
+ <input type="text" name="file" th:value="${ product.file }"/><br><br>
+ <label>In Stock:</label>
+ <input type="radio" name="instock" value="true" th:checked="${product.inStock == true}"> True
+ <input type="radio" name="instock" value="false" th:checked="${product.inStock == false}"> False<br><br>
+ <button type="submit">Edit</button>
+ <button type="submit">Edit</button>
+ </form>
+ <label th:if="${success == true}">Edit product successful</label>
+ <label th:if="${fail == true}">Edit product failed</label>
+</body>
+</html>
