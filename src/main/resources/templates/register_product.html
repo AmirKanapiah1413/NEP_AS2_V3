@@ -23,27 +23,26 @@
 				<li>
 				</ul>
 			</div>
-			<div class = "bottomnavbar">
-				<p> Copyright 2022 </p>
-			</div>
+			<div class = "column">
+				<div class = "registerform">
+					<form action = "/register_product"method="post">
+ 					<h2>Add New Product</h2>
+ 					<label>Name:</label>
+ 						<input type="text" name="name" /><br><br>
+ 					<label>Price:</label>
+ 					<input type="text" name="price" /><br><br>
+ 						<label>File:</label>
+ 					<input type="text" name="file" /><br><br>
+ 						<label>In Stock:</label>
+ 					<input type="radio" name="instock" value="true"> True
+ 					<input type="radio" name="instock" value="false"> False<br><br>
+ 					<button type="submit">Add</button>
+ 					</form>
+ 				</div>
+ 			</div>
 		</div>
-		
-		<div class = "column">
-		<div class = "registerform">
-			<form action="/add" method="post">
- 			<h2>Add New Product</h2>
- 			<label>Name:</label>
- 				<input type="text" name="name" /><br><br>
- 			<label>Price:</label>
- 			<input type="text" name="price" /><br><br>
- 				<label>File:</label>
- 			<input type="text" name="file" /><br><br>
- 				<label>In Stock:</label>
- 			<input type="radio" name="instock" value="true"> True
- 			<input type="radio" name="instock" value="false"> False<br><br>
- 				<button type="submit">Add</button>
- 			</form>
- 		</div>
- 		</div>
 	</body>
+	<footer>
+	<p>&#169; Copyright 2022 </p>
+	</footer>
 </html>
