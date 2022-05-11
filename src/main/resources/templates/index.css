@@ -202,3 +202,22 @@ footer{
 h1{
 	color: white; text-align: center;
 }
+
+.sbutton {
+	margin-left: 210px;
+}
+
+.sbar {
+	margin-left: 500px;
+	margin-top: -70px;
+}
+
+.bar {
+	display: block;
+	width: 40em;
+	padding: 15px;
+	border-radius: 25px;
+	border: 2px solid green;
+	background: transparent;
+	color: white;
+}
