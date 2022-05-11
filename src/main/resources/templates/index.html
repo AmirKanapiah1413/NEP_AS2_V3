@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th=“http://www.thymeleaf.org”>
 
 <head>
 	<meta charset="utf-8">
 	<title>Retail and Distribution</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/cssfiles/index.css}">
 </head>
 
 <body>
 	<div class="banner">
 		<div class="navbar">
 			<a href="index.html">
-				<img src="../images/logo.png" class="logo">
+				<img th:src = "@{/images/logo.png}" class="logo">
 			</a>
 			<ul>
 				<li><a href="index.html"> Home</a>
