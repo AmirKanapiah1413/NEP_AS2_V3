@@ -14,28 +14,30 @@ public class HomeController {
 	public String home() {
 	return "index";
 	}
-	@RequestMapping(value="/index.html")
+	
+	@RequestMapping(value="/index")
 	public String home2() {
 	return "index";
 	}	
 
-	@RequestMapping(value="/product.html")
+	@RequestMapping(value="/product")
 	public String product() {
 	return "product";
 	}
 	
-	@RequestMapping(value="/register_product.html")
+	@RequestMapping(value="/register_product")
 	public String register_product() {
 	return "register_product";
 	}
 
-	@RequestMapping(value="/search.html")
+	@RequestMapping(value="/search")
 	public String search() {
 	return "search";
 	}
 	
-	@RequestMapping(value="/support.html")
+	@RequestMapping(value="/support")
 	public String support() {
 	return "support";
 	}
+	
 }
