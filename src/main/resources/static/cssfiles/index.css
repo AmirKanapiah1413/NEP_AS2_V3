@@ -162,27 +162,27 @@ footer{
 }
 
 #img1{
-	background: url(../images/acer.png);
+	background: url(../images/brand/acer.png);
 	background-size: 100% 100%;
 }
 
 #img2{
-	background: url(../images/steelseries.png);
+	background: url(../images/brand/steelseries.png);
 	background-size: 100% 100%;
 }
 
 #img3{
-	background: url(../images/msi.png);
+	background: url(../images//brand/msi.png);
 	background-size: 100% 100%;
 }
 
 #img4{
-	background: url(../images/asus.png);
+	background: url(../images/brand/asus.png);
 	background-size: 100% 100%;
 }
 
 #img5{
-	background: url(../images/dell.png);
+	background: url(../images/brand/dell.png);
 	background-size: 100% 100%;
 }
 
