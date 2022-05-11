@@ -231,13 +231,14 @@ label {
 
 .card {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	max-width: 300px;
+	width: 15vw;
+	height: auto;
 	margin: 90px;
 	display: inline-block;
 	text-align: center;
 	font-family: arial;
 	border: 1px solid green;
-	background-size: 100% 100%;
+	
 }
 
 .card img {
@@ -253,13 +254,13 @@ label {
 .card button {
    border: none;
    outline: 0;
-   padding: 12px;
+   padding: 11px;
    color: white;
-   background-color: #000;
+   background-color: green;
    text-align: center;
    cursor: pointer;
    width: 50%;
-   font-size: 18px;
+   font-size: 15px;
 }
 
 .card button:hover {
@@ -267,6 +268,18 @@ label {
    opacity: 0.7;
 }
 
+.card h2 {
+	color: white;
+	font-size: 1em;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.card p {
+	color: white;
+	font-size: 1.4em;
+	font-weight: bold;
+}
 
 /*.bottombox {
 	background-color: black;
