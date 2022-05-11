@@ -89,7 +89,7 @@ button{
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 span{
@@ -224,3 +224,17 @@ h1{
 	font-weight: bold;
 	color: white;
 }
+
+/*.bottombox {
+	background-color: black;
+	color: white;
+	border: 1px solid green;
+	padding: 50px;
+	width: 300px;
+	text-align: center;
+		
+}
+
+.big {
+	line-height: 1.5px;
+}*/
