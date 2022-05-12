@@ -43,8 +43,9 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/edit_product/{productID}")
-	public String edit_product(@PathVariable int productID) {
-		System.out.println(productID);
+	public String edit_product(@PathVariable int productID,ModelMap modelMap) {
+		Product product = repos.findbyID(productID);
+		modelMap.put("product",product);
 	return "edit_product";
 	}
 	
