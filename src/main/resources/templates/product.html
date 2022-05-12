@@ -21,8 +21,8 @@
 				</ul>
 			</div>
 			
-			<div class="card">
-              <img th:src="@{product.productPath}" alt="Denim Jeans" style="width:100%">
+			<div class="card" th:each="product : ${ productList }">
+              <img th:src="@{'/images/product/' + ${product.productPath}}" alt="Denim Jeans" style="width:100%">
                  <h2 th:text="${ product.productName }"></h2>
                   <p class="price" th:text="${ product.productPrice }"></p>
                   <p class="stock" th:text="${ product.productStock }"></p>
