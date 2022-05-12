@@ -22,12 +22,13 @@
 			</div>
 			
 			<div class="card">
-              <img th:src="@{/images/product/acer.jpg}" alt="Denim Jeans" style="width:100%">
-                 <h2>Acer Aspire 5</h2>
-                  <p class="price">$19.99</p>
+              <img th:src="@{product.productPath}" alt="Denim Jeans" style="width:100%">
+                 <h2 th:text="${ product.productName }"></h2>
+                  <p class="price" th:text="${ product.productPrice }"></p>
+                  <p class="stock" th:text="${ product.productStock }"></p>
                   <p><button>Edit</button></p>
             </div>
-            
+            <!--  
             <div class="card">
               <img th:src="@{/images/product/asus.jpg}" alt="Denim Jeans" style="width:100%">
                  <h2>ASUS ROG Strix G15 Laptop</h2>
@@ -47,7 +48,7 @@
                  <h2>MSI GL62M 7REX</h2>
                   <p class="price">$19.99</p>
                   <p><button>Edit</button></p>
-            </div>
+            </div>-->
             
 			<div class = "bottomnavbar">
 				<p> Copyright 2022 </p>
