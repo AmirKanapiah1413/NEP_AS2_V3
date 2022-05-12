@@ -22,19 +22,38 @@
 			</div>
 			<div class = "column">
 				<div class = "registerform">
-					<form action = "/register_product"method="post">
- 					<h2>Add New Product</h2>
- 					<label>Name:</label>
- 						<input type="text" name="name" /><br><br>
- 					<label>Price:</label>
- 					<input type="text" name="price" /><br><br>
- 						<label>File:</label>
- 					<input type="text" name="file" /><br><br>
- 						<label>In Stock:</label>
- 					<input type="radio" name="instock" value="true"> True
- 					<input type="radio" name="instock" value="false"> False<br><br>
- 					<button type="submit">Add</button>
- 					</form>
+					<form action="/add/product/"  class="form" method="post">
+ 		<h2>Register/Add Product</h2>
+ 		<label>Product ID:</label>
+ 		<br>
+ 		<input  size="45" type="text" name="id" placeholder="Enter product ID"/><br><br>
+	 	<label>Product Name:</label>
+	 	<br>
+ 		<input  size="45" type="text" name="name" placeholder="Enter product name"/><br><br>
+	 	<label>Product Price:</label>
+	 	<br>
+	 	<input  size="45" type="text" name="price" placeholder="Enter product price eg: 123.99"/><br><br>
+	 	<label>Image File Name:</label>
+	 	<br>
+	 	<input  size="45" type="text" name="file" placeholder="Enter file name eg: img.png"/><br><br>
+ 		<label>Availability:</label>
+ 		<br>
+ 		
+		<select name="available">
+		<option >Select an Option</option>
+		<option value="true">Yes</option>
+		<option value="false">No</option>
+		</select>
+		
+	 	<div class="flex">
+	 	<div id="left">
+ 		<button>Add</button>
+ 		</div>
+ 		<div id="right">
+ 		<a th:href="@{ / }"><button>Go back</button></a>
+ 		</div>
+ 		</div>
+ 		</form>
  				</div>
  			</div>
 		</div>

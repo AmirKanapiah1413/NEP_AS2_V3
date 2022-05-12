@@ -9,11 +9,11 @@
 <div class="banner">
 			
 	
-	<form class="form" method="post">
+	<form th:action=" @{'/edit/product/' + ${ product.productID }} " class="form" method="post">
  		<h2>Edit Product</h2>
  		<label>Product ID:</label>
  		<br>
- 		<input th:value="${ product.productID }" size="45" type="text" name="id"/><br><br>
+ 		<input th:value="${ product.productID }" disabled size="45" type="text" name="id"/><br><br>
 	 	<label>Product Name:</label>
 	 	<br>
  		<input th:value="${ product.productName }" size="45" type="text" name="name" value=""/><br><br>
@@ -25,16 +25,24 @@
 	 	<input th:value="${ product.productPath }" size="45" type="text" name="file" value=""/><br><br>
  		<label>Availability:</label>
  		<br>
-		<input type="radio" name="instock" value="true" > Yes
-	 	<input type="radio" name="instock" value="false" > No<br><br>
+		<select name="available">
+		<option >Select an Option</option>
+		<option value="true">Yes</option>
+		<option value="false">No</option>
+		</select>
 	 	<div class="flex">
 	 	<div id="left">
- 		<button type="submit">Confirm Edit</button>
+ 		<button>Confirm Edit</button>
  		</div>
+ 		
  		<div id="right">
+ 		
  		<a th:href="@{ / }"><button>Go back</button></a>
+ 		
  		</div>
+ 		
  		</div>
+ 		
  		</form>
 
 			<div class = "bottomnavbar">
