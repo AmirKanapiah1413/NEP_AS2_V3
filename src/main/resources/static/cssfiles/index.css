@@ -289,15 +289,31 @@ label {
 
 .form {
 	background-color:black;
-	width: 400px; height: 350px;
+	padding:20px;
+	width: 450px; height: 540px;
 	margin:auto;
 	margin-top:300px;
-	text-align:center;
+
 	border-radius:20px;
 	color:white;
 }
 .form h2{
+	padding-top:30px;
 	margin-bottom:25px;
 	
 }
+.flex{
+	
+	display:flex;
+	flex:wrap;
+}
+
+#left, #right{
+	flex:50%;
+}
+input{
+	padding:10px;
+}
+
+
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-import com.example.nep.AS2.data.Repository;
+import com.example.nep.AS2.data.ProductRepository;
 import com.example.nep.AS2.model.Product;
 
 
@@ -21,7 +21,7 @@ import com.example.nep.AS2.model.Product;
 public class HomeController {
 	
 	@Autowired
-	private Repository repos;
+	private ProductRepository repos;
 	
 	@RequestMapping(value="/")
 	public String home() {
@@ -43,10 +43,21 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/edit_product/{productID}")
-	public String edit_product(@PathVariable int productID,ModelMap modelMap) {
+	public String editProduct(@PathVariable int productID,ModelMap modelMap) {
 		Product product = repos.findbyID(productID);
-		modelMap.put("product",product);
-	return "edit_product";
+		if (product!=null) {
+			modelMap.put("product",product);
+			return "edit_product";
+		}else {
+			return "redirect:/product";
+		}
+		
+	}
+	
+	@RequestMapping(value="/delete_product/{productID}")
+	public String deleteProduct(@PathVariable int productID) {
+		repos.delete(productID);
+		return "redirect:/product";
 	}
 	
 	@RequestMapping(value="/search")
