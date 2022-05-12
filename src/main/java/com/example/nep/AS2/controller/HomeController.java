@@ -14,11 +14,6 @@ public class HomeController {
 	public String home() {
 	return "index";
 	}
-	
-	@RequestMapping(value="/index")
-	public String home2() {
-	return "index";
-	}	
 
 	@RequestMapping(value="/product")
 	public String product() {

@@ -10,20 +10,15 @@
 <body>
 	<div class="banner">
 		<div class="navbar">
-			<a href="/">
+			<a th:href="@{ / }">
 				<img th:src = "@{/images/logo.png}" class="logo">
 			</a>
 			<ul>
-				<li><a href="/"> Home</a>
-				<li>
-				<li><a href="/product"> Products</a>
-				<li>
-				<li><a href="/register_product"> Register Product</a>
-				<li>
-				<li><a href="/search"> Search Product</a>
-				<li>
-				<li><a href="/support"> Support</a>
-				<li>
+				<li><a th:href="@{ / }"> Home</a><li>
+				<li><a th:href="@{ /product }"> Products</a>	<li>
+				<li><a th:href="@{ /register_product }"> Register Product</a><li>
+				<li><a th:href="@{ /search }"> Search Product</a><li>
+				<li><a th:href="@{ /support }"> Support</a><li>
 			</ul>
 		</div>
 
