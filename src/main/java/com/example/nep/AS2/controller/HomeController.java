@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -40,7 +41,13 @@ public class HomeController {
 	public String register_product() {
 	return "register_product";
 	}
-
+	
+	@RequestMapping(value="/edit_product/{productID}")
+	public String edit_product(@PathVariable int productID) {
+		System.out.println(productID);
+	return "edit_product";
+	}
+	
 	@RequestMapping(value="/search")
 	public String search() {
 	return "search";

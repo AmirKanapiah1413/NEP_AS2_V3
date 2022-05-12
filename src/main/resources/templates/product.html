@@ -26,7 +26,8 @@
                  <h2 th:text="${ product.productName }"></h2>
                   <p class="price" th:text="${ product.productPrice }"></p>
                   <p class="stock" th:text="${ product.productStock }"></p>
-                  <p><button>Edit</button></p>
+                  <a th:href="@{ '/edit_product/' + ${ product.productID } }"><button >Edit</button></a>
+                  <a th:href="@{ /edit_product }"><button >Delete</button></a>
             </div>
             <!--  
             <div class="card">

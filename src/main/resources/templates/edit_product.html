@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang = "en" xmlns:th=“http://www.thymeleaf.org”>
 <head>
-<meta charset="UTF-8">
-<title>Edit Product Page</title>
-</head>
+		<meta charset = "utf-8">
+		<title>Edit Product Page</title>
+		<link rel = "stylesheet" type = "text/css" th:href="@{/cssfiles/index.css}">
+	</head>
 <body>
- <form th:action="@{'/edit/' + ${product.id}}" method="post">
- <h2>Edit Product</h2>
- <label>Name:</label>
- <input type="text" name="name" th:value="${ product.name }"/><br><br>
- <label>Price:</label>
- <input type="text" name="price" th:value="${ product.price }"/><br><br>
- <label>File:</label>
- <input type="text" name="file" th:value="${ product.file }"/><br><br>
- <label>In Stock:</label>
- <input type="radio" name="instock" value="true" th:checked="${product.inStock == true}"> True
- <input type="radio" name="instock" value="false" th:checked="${product.inStock == false}"> False<br><br>
- <button type="submit">Edit</button>
- <button type="submit">Edit</button>
- </form>
- <label th:if="${success == true}">Edit product successful</label>
- <label th:if="${fail == true}">Edit product failed</label>
+<div class="banner">
+			
+	
+	<form class="form" method="post">
+ 		<h2>Edit Product</h2>
+	 	<label>Name:</label>
+ 		<input type="text" name="name" value=""/><br><br>
+	 	<label>Price:</label>
+	 	<input type="text" name="price" value=""/><br><br>
+	 	<label>File:</label>
+	 	<input type="text" name="file" value=""/><br><br>
+ 		<label>In Stock:</label>
+		<input type="radio" name="instock" value="true" > True
+	 	<input type="radio" name="instock" value="false" > False<br><br>
+ 		<button type="submit">Confirm Edit</button>
+ 		</form>
+
+			<div class = "bottomnavbar">
+				<p> Copyright 2022 </p>
+			</div>
+		
+
+ </div>
+ 
 </body>
 </html>

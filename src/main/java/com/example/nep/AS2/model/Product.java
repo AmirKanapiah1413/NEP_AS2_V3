@@ -1,16 +1,27 @@
 package com.example.nep.AS2.model;
 
 public class Product {
+	
 private String productName;
 private String productPath;
+private int productID;
 private double productPrice;
 private boolean productStock;
 
-public Product(String productName, String productPath, double productPrice, boolean productStock) {
+public Product(String productName, String productPath,int productID, double productPrice, boolean productStock) {
 	this.productName = productName;
 	this.productPrice = productPrice;
 	this.productPath = productPath;
 	this.productStock = productStock;
+	this.productID = productID;
+}
+
+public int getProductID() {
+	return productID;
+}
+
+public void setProductID(int productID) {
+	this.productID = productID;
 }
 
 public String getProductPath() {
