@@ -2,6 +2,7 @@ package com.example.nep.AS2.controller;
 
 
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,14 +97,25 @@ public class HomeController {
 		return "redirect:/product";
 	}
 	
+
 	@RequestMapping(value="/search")
-	public String search() {
-	return "search";
+	public String search(@RequestParam(required=false) String name,ModelMap modelMap) {
+		 
+		 if(name == null) {
+		List<Product> p = repos.getAllProducts();
+		modelMap.put("productList",p);
+		 } else {
+		List<Product> p = repos.containName(name);
+		modelMap.put("productList",p);
+		 }
+		 
+	 return "search";
 	}
 	
 	@RequestMapping(value="/support")
 	public String support() {
 	return "support";
 	}
+	
 	
 }

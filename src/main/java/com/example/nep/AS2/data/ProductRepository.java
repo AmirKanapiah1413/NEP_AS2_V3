@@ -4,6 +4,7 @@ package com.example.nep.AS2.data;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -20,15 +21,27 @@ private static final ArrayList <Product> ALL_PRODUCTS = new ArrayList <Product> 
 		);
 
 
-public Product findbyName(String name) {
+public Product findbyName(String a) {
 	for (Product product : ALL_PRODUCTS) {
-		if(product.getProductName().equals(name)) {
+		if(product.getProductName().contains(a)) {
 			return product;
 		}
 	
 		
 	}
 	return null;
+}
+
+public List<Product> containName(String a) {
+	List<Product>products=new ArrayList<Product>();
+	for (Product product : ALL_PRODUCTS) {
+		if(product.getProductName().contains(a)) {
+			products.add(product);
+		}
+	
+		
+	}
+	return products;
 }
 
 public Product findbyID(int id) {

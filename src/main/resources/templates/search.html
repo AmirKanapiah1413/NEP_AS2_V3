@@ -22,14 +22,23 @@
 			</div>
 			
 			<!--Search Button-->
+			<form th:action="@{ /search }" method="get">
 			<div class = "sbutton">
-				<button class = "btn" type = "submit">Search</button>
+				<button class = "btn">Search</button>
 			</div>
 			
 			<!--Search Bar-->
 			<div class = "sbar">
-				<input class = "bar" type = "text" placeholder = "E.g Laptop" name = "">
+				<input class = "bar" type = "text" placeholder = "E.g Laptop" name = "name">
 			</div>
+			</form>
+			<div class="card" th:each="product : ${ productList }">
+              <img th:src="@{'/images/product/' + ${product.productPath}}" alt="Denim Jeans" style="width:100%">
+                 <h2 th:text="${ product.productName }"></h2>
+                  <p class="price" th:text="${ product.productPrice }"></p>
+                  <p class="stock" th:text="${ product.productStock }"></p>
+                  
+            </div>
 		</div>
 	</body>
 	<footer>
