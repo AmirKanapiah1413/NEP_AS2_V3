@@ -287,16 +287,31 @@ label {
 	font-weight: bold;
 }
 
-.form {
+.form1 {
+	background-color:black;
+	padding:20px;
+	width: 380px; 
+	margin:auto;
+	margin-top:30px;
+	border-radius:20px;
+	color:white;
+}
+
+.form2 {
 	background-color:black;
 	padding:20px;
 	width: 450px; height: 540px;
 	margin:auto;
-	margin-top:300px;
-
+	margin-top:250px;
 	border-radius:20px;
 	color:white;
 }
+
+.flex1 button {
+	color:white;
+	margin-right: 100px;
+}
+
 .form h2{
 	padding-top:30px;
 	margin-bottom:25px;
@@ -311,6 +326,7 @@ label {
 #left, #right{
 	flex:50%;
 }
+
 input{
 	padding:10px;
 }

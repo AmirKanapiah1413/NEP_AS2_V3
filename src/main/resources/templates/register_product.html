@@ -1,64 +1,68 @@
 <!DOCTYPE html>
-<html lang = "en" xmlns:th=“http://www.thymeleaf.org”>
-	<head>
-		<meta charset = "utf-8">
-		<title>Product Registration Page</title>
-		<link rel = "stylesheet" type = "text/css" th:href="@{/cssfiles/index.css}">
-	</head>
-	
-	<body>
-		<div class = "banner">
-			<div class = "navbar">
-				<a th:href="@{ / }">
-				<img th:src = "@{/images/logo.png}" class = "logo">
+<html lang="en" xmlns:th=“http://www.thymeleaf.org”>
+
+<head>
+	<meta charset="utf-8">
+	<title>Product Registration Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/cssfiles/index.css}">
+</head>
+
+<body>
+	<div class="banner">
+		<div class="navbar">
+			<a th:href="@{ / }">
+				<img th:src="@{/images/logo.png}" class="logo">
 			</a>
-				<ul>
-				<li><a th:href="@{ / }"> Home</a><li>
-				<li><a th:href="@{ /product }"> Products</a>	<li>
-				<li><a th:href="@{ /register_product }"> Register Product</a><li>
-				<li><a th:href="@{ /search }"> Search Product</a><li>
-				<li><a th:href="@{ /support }"> Support</a><li>
-				</ul>
-			</div>
-			<div class = "column">
-				<div class = "registerform">
-					<form action="/add/product/"  class="form" method="post">
- 		<h2>Register/Add Product</h2>
- 		<label>Product ID:</label>
- 		<br>
- 		<input  size="45" type="text" name="id" placeholder="Enter product ID"/><br><br>
-	 	<label>Product Name:</label>
-	 	<br>
- 		<input  size="45" type="text" name="name" placeholder="Enter product name"/><br><br>
-	 	<label>Product Price:</label>
-	 	<br>
-	 	<input  size="45" type="text" name="price" placeholder="Enter product price eg: 123.99"/><br><br>
-	 	<label>Image File Name:</label>
-	 	<br>
-	 	<input  size="45" type="text" name="file" placeholder="Enter file name eg: img.png"/><br><br>
- 		<label>Availability:</label>
- 		<br>
- 		
-		<select name="available">
-		<option >Select an Option</option>
-		<option value="true">Yes</option>
-		<option value="false">No</option>
-		</select>
-		
-	 	<div class="flex">
-	 	<div id="left">
- 		<button>Add</button>
- 		</div>
- 		<div id="right">
- 		<a th:href="@{ / }"><button>Go back</button></a>
- 		</div>
- 		</div>
- 		</form>
- 				</div>
- 			</div>
+			<ul>
+				<li><a th:href="@{ / }"> Home</a>
+				<li>
+				<li><a th:href="@{ /product }"> Products</a>
+				<li>
+				<li><a th:href="@{ /register_product }"> Register Product</a>
+				<li>
+				<li><a th:href="@{ /search }"> Search Product</a>
+				<li>
+				<li><a th:href="@{ /support }"> Support</a>
+				<li>
+			</ul>
 		</div>
-	</body>
-	<footer>
+		<div class="column">
+			<div class="registerform">
+				<form action="/add/product/" class="form1" method="post">
+					<h2>Register/Add Product</h2>
+					<label>Product ID:</label>
+					<br>
+					<input size="45" type="text" name="id" placeholder="Enter product ID" /><br><br>
+					<label>Product Name:</label>
+					<br>
+					<input size="45" type="text" name="name" placeholder="Enter product name" /><br><br>
+					<label>Product Price:</label>
+					<br>
+					<input size="45" type="text" name="price" placeholder="Enter product price eg: 123.99" /><br><br>
+					<label>Image File Name:</label>
+					<br>
+					<input size="45" type="text" name="file" placeholder="Enter file name eg: img.png" /><br><br>
+					<label>Availability:</label>
+					<br>
+
+					<select name="available">
+						<option>Select an Option</option>
+						<option value="true">Yes</option>
+						<option value="false">No</option>
+					</select>
+
+					<div class="flex1">
+						<div id="left">
+							<button>Add</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
 	<p>&#169; Copyright 2022 </p>
-	</footer>
+</footer>
+
 </html>

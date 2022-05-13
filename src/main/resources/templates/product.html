@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang = "en" xmlns:th=“http://www.thymeleaf.org”>
-	<head>
-		<meta charset = "utf-8">
-		<title>Product Page</title>
-		<link rel = "stylesheet" type = "text/css" th:href="@{/cssfiles/index.css}">
-	</head>
-	
-	<body>
-		<div class = "banner">
-			<div class = "navbar">
+<html lang="en" xmlns:th=“http://www.thymeleaf.org”>
+
+<head>
+	<meta charset="utf-8">
+	<title>Product Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/cssfiles/index.css}">
+</head>
+
+<body>
+	<div class="banner">
+		<div class="navbar">
 			<a th:href="@{ / }">
-				<img th:src = "@{/images/logo.png}" class = "logo">
+				<img th:src="@{/images/logo.png}" class="logo">
 			</a>
-				<ul>
-				<li><a th:href="@{ / }"> Home</a><li>
-				<li><a th:href="@{ /product }"> Products</a>	<li>
-				<li><a th:href="@{ /register_product }"> Register Product</a><li>
-				<li><a th:href="@{ /search }"> Search Product</a><li>
-				<li><a th:href="@{ /support }"> Support</a><li>
-				</ul>
-			</div>
-			
-			<div class="card" th:each="product : ${ productList }">
-              <img th:src="@{'/images/product/' + ${product.productPath}}" alt="Denim Jeans" style="width:100%">
-                 <h2 th:text="${ product.productName }"></h2>
-                  <p class="price" th:text="${ product.productPrice }"></p>
-                  <p class="stock" th:text="${ product.productStock }"></p>
-                  <a th:href="@{ '/edit_product/' + ${ product.productID } }"><button >Edit</button></a>
-                  <a th:href="@{ '/delete_product/' + ${ product.productID } }"><button >Delete</button></a>
-            </div>
-            <!--  
+			<ul>
+				<li><a th:href="@{ / }"> Home</a>
+				<li>
+				<li><a th:href="@{ /product }"> Products</a>
+				<li>
+				<li><a th:href="@{ /register_product }"> Register Product</a>
+				<li>
+				<li><a th:href="@{ /search }"> Search Product</a>
+				<li>
+				<li><a th:href="@{ /support }"> Support</a>
+				<li>
+			</ul>
+		</div>
+
+		<div class="card" th:each="product : ${ productList }">
+			<img th:src="@{'/images/product/' + ${product.productPath}}" alt="Denim Jeans" style="width:100%">
+			<h2 th:text="${ product.productName }"></h2>
+			<p class="price" th:text="${ product.productPrice }"></p>
+			<p class="stock" th:text="${ product.productStock }"></p>
+			<a th:href="@{ '/edit_product/' + ${ product.productID } }"><button>Edit</button></a>
+			<a th:href="@{ '/delete_product/' + ${ product.productID } }"><button>Delete</button></a>
+		</div>
+		<!--  
             <div class="card">
               <img th:src="@{/images/product/asus.jpg}" alt="Denim Jeans" style="width:100%">
                  <h2>ASUS ROG Strix G15 Laptop</h2>
@@ -50,10 +56,9 @@
                   <p class="price">$19.99</p>
                   <p><button>Edit</button></p>
             </div>-->
-            
-			<div class = "bottomnavbar">
-				<p> Copyright 2022 </p>
-			</div>
-		</div>
-	</body>
+
+
+	</div>
+</body>
+
 </html>

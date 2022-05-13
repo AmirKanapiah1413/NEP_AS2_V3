@@ -75,19 +75,19 @@ public class HomeController {
 			@RequestParam(required=true) String name,
 			@RequestParam(required=true) double price,
 			@RequestParam(required=true) String file,
-			@RequestParam(required=false) String available
+			@RequestParam(required=false) boolean available
 			) {
 		Product product = repos.findbyID(id);
 		boolean stock = true;
-		if (available.equals("yes")) {
-			stock=true;
-		}else {
-			stock=false;
-		}
+//		if (available.equals("yes")) {
+//			stock=true;
+//		}else {
+//			stock=false;
+//		}
 		product.setProductName(name);
 		product.setProductPath(file);
 		product.setProductPrice(price);
-		product.setProductStock(stock);
+		product.setProductStock(available);
 		return "redirect:/product";
 	}
 	
