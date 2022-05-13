@@ -1,40 +1,67 @@
 <!DOCTYPE html>
-<html lang = "en" xmlns:th=“http://www.thymeleaf.org”>
-	<head>
-		<meta charset = "utf-8">
-		<title>Support Page</title>
-		<link rel = "stylesheet" type = "text/css" th:href="@{/cssfiles/index.css}">
-	</head>
-	
-	<body>
-		<div class = "banner">
-			<div class = "navbar">
-				<a th:href="@{ / }">
-				<img th:src = "@{/images/logo.png}" class = "logo">
+<html lang="en" xmlns:th=“http://www.thymeleaf.org”>
+
+<head>
+	<meta charset="utf-8">
+	<title>Support Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/cssfiles/index.css}">
+</head>
+
+<body>
+	<div class="banner">
+		<div class="navbar">
+			<a th:href="@{ / }">
+				<img th:src="@{/images/logo.png}" class="logo">
 			</a>
-				<ul>
-				<li><a th:href="@{ / }"> Home</a><li>
-				<li><a th:href="@{ /product }"> Products</a>	<li>
-				<li><a th:href="@{ /register_product }"> Register Product</a><li>
-				<li><a th:href="@{ /search }"> Search Product</a><li>
-				<li><a th:href="@{ /support }"> Support</a><li>
-				</ul>
-			</div>
- 	
- 			<!--
-			<div class = "bottombox">
-				<p class = "big">
-				   Contact No.: +673 8889222 <br>
-				   Instagram: No_Name <br>
-				   Facebook: No Name <br>
-				</p>
-			</div>
-			-->
-			
+			<ul>
+				<li><a th:href="@{ / }"> Home</a>
+				<li>
+				<li><a th:href="@{ /product }"> Products</a>
+				<li>
+				<li><a th:href="@{ /register_product }"> Register Product</a>
+				<li>
+				<li><a th:href="@{ /search }"> Search Product</a>
+				<li>
+				<li><a th:href="@{ /support }"> Support</a>
+				<li>
+			</ul>
 		</div>
-	</body>
-	<footer>
+
+		<div class="support">
+			<div class="supportbox">
+				<h1>Contact Support</h1>
+				<br><br>
+				<p id="contact">Contact No.: +673 8889222
+				</p>
+				<br>
+				<p id="contact">
+					Instagram: Bright_Ltd
+				</p>
+				<br>
+				<p id="contact">
+					Facebook: Bright Ltd 
+				</p>
+				<br>
+			</div>
+
+			<div class="aboutus">
+				<h1>About Us</h1>
+				<br><br>
+				<p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor
+					in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident,
+					sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<br><br>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
 	<p>&#169; Copyright 2022 </p>
-	</footer>
+</footer>
 
 </html>

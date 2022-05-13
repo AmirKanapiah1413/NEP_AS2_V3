@@ -235,7 +235,7 @@ label {
 	color:white;
 }
 
-.card {
+.technology {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	width: 15vw;
 	height: auto;
@@ -247,7 +247,7 @@ label {
 	
 }
 
-.card img {
+.technology img {
 	width: 260px; height: 260px;
 
 }
@@ -257,7 +257,7 @@ label {
    font-size: 22px;
 }
 
-.card button {
+.technology button {
    border: none;
    outline: 0;
    padding: 11px;
@@ -269,19 +269,18 @@ label {
    font-size: 15px;
 }
 
-.card button:hover {
-
+.technology button:hover {
    opacity: 0.7;
 }
 
-.card h2 {
+.technology h2 {
 	color: white;
 	font-size: 1em;
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
-.card p {
+.technology p {
 	color: white;
 	font-size: 1.4em;
 	font-weight: bold;
@@ -331,5 +330,40 @@ input{
 	padding:10px;
 }
 
+.support {
+	display: block;
+	width:100%; height: auto;
+}
+
+.supportbox {
+	width: 300px; height: 200px;
+	border: 2px solid green;
+	margin-top: 130px;
+	margin-left: 270px;
+	border-radius: 10px;
+	padding: 15px;
+	display: inline;
+	float: left;
+}
+
+.aboutus {
+	display:inline;
+	line-height: 30px;
+	width: 700px; height: 300px;
+	float: left;
+	border: 2px solid green;
+	margin-top: 80px;
+	margin-left: 270px;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+#lorem {
+	color: white;
+}
+
+#contact {
+	color:white;
+}
 
 
