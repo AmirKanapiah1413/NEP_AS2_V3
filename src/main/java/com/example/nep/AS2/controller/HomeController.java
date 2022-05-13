@@ -55,6 +55,8 @@ public class HomeController {
 		
 			return "redirect:/";
 	}
+	
+	
 	@RequestMapping(value="/edit_product/{productID}")
 	public String editProduct(@PathVariable int productID,ModelMap modelMap) {
 		Product product = repos.findbyID(productID);
@@ -75,18 +77,17 @@ public class HomeController {
 			@RequestParam(required=false) String available
 			) {
 		Product product = repos.findbyID(id);
-		boolean stock = false;
-		if (available.equals("true")) {
+		boolean stock = true;
+		if (available.equals("yes")) {
 			stock=true;
 		}else {
 			stock=false;
 		}
-		product.setProductID(id);
 		product.setProductName(name);
 		product.setProductPath(file);
 		product.setProductPrice(price);
 		product.setProductStock(stock);
-		return "redirect:/edit_product"+id;
+		return "redirect:/product";
 	}
 	
 	@RequestMapping(value="/delete_product/{productID}")
